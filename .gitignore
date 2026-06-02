@@ -2,3 +2,4 @@ data/*
 venv
 .venv
 *.pth
+.DS_Store
