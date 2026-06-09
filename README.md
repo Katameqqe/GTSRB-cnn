@@ -1,11 +1,6 @@
-# Rozpoznawanie Znaków Drogowych za pomocą Sieci Neuronowych
+# Klasyfikacja Znaków Drogowych za pomocą Sieci Splotowych na zbiorze GTSRB
 
-Projekt zawiera kompletny i zoptymalizowany proces uczenia maszynowego do klasyfikacji znaków drogowych na podstawie bazy danych GTSRB. Projekt przeszedł drogę od podstawowej konfiguracji do bezpiecznej i odpornej na błędy struktury sieci splotowych.
-
-## Rozwiązane wyzwania:
-
-1. Nierówny podział znaków w bazie danych. Niektóre znaki występują bardzo rzadko. Rozwiązaliśmy to przez wdrożenie mechanizmu próbkowania ważonego o nazwie WeightedRandomSampler. 
-2. Wyciek danych w bazie. Zdjęcia tego samego fizycznego znaku nagrane sekwencyjnie mogły trafić jednocześnie do uczenia i testu. Zaprojektowaliśmy własny podział danych na poziomie całych serii zdjęć. Zapobiega to oszukiwaniu sieci i urealnia wyniki.
+Repozytorium zawiera implementację systemu klasyfikacji znaków drogowych opartego na architekturze splotowej sieci neuronowej CNN dla zbioru danych GTSRB. Projekt wykorzystuje oficjalną i stabilną bibliotekę torchvision.datasets.GTSRB w celu bezpośredniej klasyfikacji obrazów znaków drogowych na podstawie dostarczonego zestawu danych.
 
 ## Zawartość plików:
 
@@ -35,17 +30,12 @@ Wszystkie modele zostały przetestowane na osobnym, bezpiecznym zbiorze testowym
 - Model podstawowy: 93.06 procent dokładności
 - Model z przekształceniami obrazu: 93.18 procent dokładności
 - Model zoptymalizowany przez Optunę: 93.02 procent dokładności
-- Model wysokiej rozdzielczości: 95.39 procent dokładności, co stanowi nasz najlepszy wynik
+- Model wysokiej rozdzielczości: 95.39 procent dokładności
 
-## Zapisane wykresy:
-
-- test_confusion_matrix.png to wykres wszystkich pomyłek i poprawnych trafień
-- model_mistakes_analysis.png to zestawienie zdjęć, na których model się pomylił
-- gradcam_high_res_analysis.png to nałożone na znaki mapy ciepła pokazujące skupienie uwagi sieci
 
 ## Requirements:
 
-1. Zainstaluj biblioteki wpisując pip install -r requirements.txt.
+ pip install -r requirements.txt.
 
 ## Struktura projektu:
 ```
