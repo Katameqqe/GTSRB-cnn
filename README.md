@@ -39,13 +39,9 @@ Wszystkie modele zostały przetestowane na osobnym, bezpiecznym zbiorze testowym
 
 ## Struktura projektu:
 ```
-GTSRB-cnn/
 main.ipynb
 test.ipynb
 requirements.txt
-data/
-Train/ - foldery ze znakami od 0 do 42
-Test/ - zdjęcia w formacie png
-Train.csv
-Test.csv
+data/gtsrb/GTSRB/Final_Test - Testowanie
+data/gtsrb/GTSRB/Training - Trenowanie
 ```
